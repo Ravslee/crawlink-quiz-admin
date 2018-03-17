@@ -1,0 +1,16 @@
+<div  style="height:100%" >
+ 
+  <div class="w3-table-all w3-hoverable">
+    <tr>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Score</th>
+    </tr>
+    <tr *ngFor="let result of results">
+      <td>{{result.email}}</td>
+      <td>{{result.phone}}</td>
+      <td>{{result.score}}</td>
+
+    </tr>
+  </div>
+</div>

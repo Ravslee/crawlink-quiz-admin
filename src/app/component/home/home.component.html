@@ -1,0 +1,22 @@
+<div  style="height:100%" >
+  <div class="w3-row" style="height:100%">
+    <div class="w3-col" style="width:200px;height:100% ; background-color:#f5f5f5">
+      <ul class="w3-ul w3-hoverable">
+          <li [routerLink]="['questions']">Questions</li>
+        <li [routerLink]="['addquestion']">
+          Add Questions </li>
+        <li [routerLink]="['results']">See Results</li>
+        <li (click)="logout()">logout</li>
+      </ul>
+
+    </div>
+    <div class="w3-rest" >
+    
+       <router-outlet>
+
+       </router-outlet>
+
+
+    </div>
+  </div>
+</div>

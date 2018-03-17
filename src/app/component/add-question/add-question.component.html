@@ -1,0 +1,53 @@
+<div class="w3-container">
+  <div  style="margin-top:16px">
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Question</span>
+          </div>
+          <textarea [(ngModel)]="question.question" rows="6" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <br>
+      
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Option a</span>
+          </div>
+          <textarea [(ngModel)]="question.a" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <br>
+      
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Option b</span>
+          </div>
+          <textarea [(ngModel)]="question.b" class="form-control"  aria-label="With textarea"></textarea>
+        </div>
+        <br>
+      
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Option c</span>
+          </div>
+          <textarea [(ngModel)]="question.c" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <br>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Option d</span>
+          </div>
+          <textarea [(ngModel)]="question.d" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <br>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">answer( a, b, c, d )</span>
+          </div>
+          <input [(ngModel)]="question.ans" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      
+        </div>
+        <br>
+        <button (click)="addQuestion()" type="button" class="btn btn-primary btn-lg btn-block">Save</button>
+  </div>
+
+
+</div>

@@ -1,0 +1,20 @@
+<div class="w3-card w3-margin " style="min-height:100px" *ngFor="let question of questions; let i=index">
+  <header class="w3-container w3-teal">
+    <h6> Q {{i+1 }}. {{question.question}}</h6>
+  </header>
+  <div class="w3-panel w3-container">
+    a. {{question.a}}
+  </div>
+  <div class="w3-panel w3-container">
+    b. {{question.b}}
+  </div>
+  <div class="w3-panel w3-container">
+    c. {{question.c}}
+  </div>
+  <div class="w3-panel w3-container">
+    d. {{question.d}}
+  </div>
+  <div class="w3-panel w3-container">
+      ans. {{question.ans}}
+    </div>
+</div>
