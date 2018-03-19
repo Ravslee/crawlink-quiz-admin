@@ -9,13 +9,15 @@ import { Question } from '../../models/Question';
 })
 export class AddQuestionComponent implements OnInit {
   public question: any;
+  public json:string;
   constructor(private dataProviderService: DataProviderService) { }
 
   ngOnInit() {
     this.question = new Question();
+    
   }
 
- public addQuestion() {
+  public addQuestion() {
     if (!this.question.question) {
       console.log("question required");
       return;
@@ -38,9 +40,22 @@ export class AddQuestionComponent implements OnInit {
     }
     this.dataProviderService
       .addQuestion(this.question)
-      .then((res)=>{
-          console.log("Question Added Successfully!");
+      .then((res:any) => {
+        var question:Question = new Question();
+
+        question._id = res.id;
+        question.a = res.a;
+        question.b = res.b;
+        question.c = res.c;
+        question.d = res.d;
+        question.ans = res.ans;
+       
+        this.dataProviderService
+        .updateQuestion(question,question._id)
+        .then(res=>{
+          console.log("Question Added Successfully! with id - "+ question._id);
           this.question = {};
+        });
       })
   }
 

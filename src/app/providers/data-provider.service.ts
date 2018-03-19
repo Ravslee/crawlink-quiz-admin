@@ -21,6 +21,7 @@ export class DataProviderService {
       this.QuestionCollectionRef
         .add(q)
         .then((data) => {
+          
           resolve(data);
         })
         .catch((err: any) => {

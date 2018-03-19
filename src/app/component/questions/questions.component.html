@@ -1,20 +1,23 @@
 <div class="w3-card w3-margin " style="min-height:100px" *ngFor="let question of questions; let i=index">
   <header class="w3-container w3-teal">
-    <h6> Q {{i+1 }}. {{question.question}}</h6>
+    <pre class="w3-text-white "> Q {{i+1 }}. {{question.question}}</pre>
   </header>
-  <div class="w3-panel w3-container">
-    a. {{question.a}}
-  </div>
-  <div class="w3-panel w3-container">
-    b. {{question.b}}
-  </div>
-  <div class="w3-panel w3-container">
-    c. {{question.c}}
-  </div>
-  <div class="w3-panel w3-container">
-    d. {{question.d}}
-  </div>
-  <div class="w3-panel w3-container">
-      ans. {{question.ans}}
-    </div>
+  <ul class="w3-ul w3-hoverable">
+    <li>
+      <pre>a. {{question.a}}</pre>
+    </li>
+    <li>
+      <pre>b. {{question.b}}</pre>
+    </li>
+    <li>
+      <pre>c. {{question.c}}</pre>
+    </li>
+    <li>
+      <pre>d. {{question.d}}</pre>
+    </li>
+    <li>
+      <pre>ans. {{question.ans}}</pre>
+    </li>
+  </ul>
+
 </div>
