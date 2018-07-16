@@ -1,19 +1,31 @@
-<div style="height:100vh" style="margin-top:20px" class="w3-container">
-
-  <div class="w3-card" style="width:800px; padding:24px">
-    <h5>Admin Login</h5>
-      <div class="form-group">
+<div style="height:100vh" style="height:100%;background: linear-gradient(to bottom right, #7C4DFF, #C51162);" class="w3-container">
+  <div class="w3-row">
+    <div class="w3-col " style="width:500px">
+      <div class="w3-card w3-text-white " style="width:400px; padding:24px;margin: 24px; height:600px;   background:#455A64;">
+        <h5>Admin Login</h5>
+        <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" [(ngModel)]="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <small id="emailHelp" class="form-text w3-text-white text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" [(ngModel)]="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
-       
+
         <button type="login" (click)="signIn()" class="btn btn-primary">Login</button>
+      </div>
+
+    </div>
+    <div class="w3-rest">
+      <div class="w3-text-white">
+        <p style="font-size:54px">Crawlink online test portal</p>
+        <h5> Admin </h5>
+      </div>
+    </div>
+
   </div>
-   
+
+
 
 </div>
